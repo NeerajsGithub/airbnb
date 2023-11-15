@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss-animation@2.0.2/dist/index.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class=" font-[Poppins]">
+  <nav class=" bg-white w-full flex relative justify-between items-center mx-auto px-8 h-20">
+    <!-- logo -->
+    <div class="inline-flex">
+        <a class="_o6689fn" href="/"
+            ><div class="hidden md:block">
+                <svg width="102" height="32" fill="currentcolor" style="display: block">
+                    <path d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5zM41.54 24.12a5.02 5.02 0 01-3.95-1.83 6.55 6.55 0 01-1.6-4.48 6.96 6.96 0 011.66-4.58 5.3 5.3 0 014.08-1.86 4.3 4.3 0 013.7 1.92l.1-1.57h2.92V23.8h-2.93l-.1-1.76a4.52 4.52 0 01-3.88 2.08zm.76-2.88c.58 0 1.09-.16 1.57-.45.44-.32.8-.74 1.08-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.55.45zM53.45 8.46c0 .35-.06.67-.22.93-.16.25-.38.48-.67.64-.29.16-.6.22-.92.22-.32 0-.64-.06-.93-.22a1.84 1.84 0 01-.67-.64 1.82 1.82 0 01-.22-.93c0-.36.07-.68.22-.93.16-.3.39-.48.67-.64.29-.16.6-.23.93-.23a1.84 1.84 0 011.6.86 2 2 0 01.21.94zm-3.4 15.3V11.7h3.18v12.08h-3.19zm11.68-8.9v.04c-.15-.07-.35-.1-.5-.13-.2-.04-.36-.04-.55-.04-.89 0-1.56.26-2 .8-.48.55-.7 1.32-.7 2.31v5.93h-3.19V11.69h2.93l.1 1.83c.32-.64.7-1.12 1.24-1.48a3.1 3.1 0 011.81-.5c.23 0 .45.02.64.06.1.03.16.03.22.06v3.2zm1.28 8.9V6.74h3.18v6.5c.45-.58.96-1.03 1.6-1.38a5.02 5.02 0 016.08 1.31 6.55 6.55 0 011.6 4.49 6.96 6.96 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.1 1.57-2.92.03zm6.15-2.52c.57 0 1.08-.16 1.56-.45.44-.32.8-.74 1.08-1.25.26-.51.38-1.12.38-1.8 0-.67-.12-1.28-.38-1.79a3.75 3.75 0 00-1.08-1.25 2.95 2.95 0 00-3.12 0c-.45.32-.8.74-1.09 1.25a4.01 4.01 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.98.45 1.56.45zm7.51 2.53V11.69h2.93l.1 1.57a3.96 3.96 0 013.54-1.89 4.1 4.1 0 013.82 2.44c.35.76.54 1.7.54 2.75v7.24h-3.19v-6.82c0-.84-.19-1.5-.57-1.99-.38-.48-.9-.74-1.56-.74-.48 0-.9.1-1.27.32-.35.23-.64.52-.86.93a2.7 2.7 0 00-.32 1.35v6.92h-3.16zm12.52 0V6.73h3.19v6.5a4.67 4.67 0 013.73-1.89 5.02 5.02 0 013.95 1.83 6.57 6.57 0 011.59 4.48 6.95 6.95 0 01-1.66 4.58 5.3 5.3 0 01-4.08 1.86 4.3 4.3 0 01-3.7-1.92l-.09 1.57-2.93.03zm6.18-2.53c.58 0 1.09-.16 1.56-.45.45-.32.8-.74 1.09-1.25.25-.51.38-1.12.38-1.8a3.42 3.42 0 00-1.47-3.04 2.95 2.95 0 00-3.12 0c-.44.32-.8.74-1.08 1.25a3.63 3.63 0 00-.38 1.8 3.42 3.42 0 001.47 3.04c.47.29.95.45 1.55.45z" ></path>
+                </svg>
+            </div>
+            <div class="block md:hidden">
+                <svg width="30" height="32" fill="currentcolor" style="display: block">
+                    <path d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5z"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <!-- end logo -->
+
+    <!-- search bar -->
+    <form class=" w-[50%] hidden xl:block lg:block md:block">
+      <div class="flex">
+          <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
+          <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-300" type="button">All categories <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg></button>
+          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
+              <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Shopping</a>
+              </li>
+              <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Images</a>
+              </li>
+              <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">News</a>
+              </li>
+              <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100">Finance</a>
+              </li>
+              </ul>
+          </div>
+          <div class="relative w-full">
+              <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Search" required>
+              <button type="submit" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-gray-900 rounded-e-lg border border-gray-800 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300"><svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+    </svg></button>
+          </div>
+      </div>
+    </form>
+    
+    <!-- end search bar -->
+
+    <!-- login -->
+    <div class="flex-initial">
+      <div class="flex justify-end items-center relative">
+       
+        <div class="flex mr-4 items-center">
+          <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" href="login.html">
+            <div class="flex items-center relative cursor-pointer whitespace-nowrap">Become a host</div>
+          </a>
+          <div class="block relative">
+            <button type="button" class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full relative ">
+              <div class="flex items-center h-5">
+                <div class="_xpkakx">
+                  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="block">
+            <div class="inline relative">
+                <button type="button" class="inline-flex items-center relative px-2 border rounded-full hover:shadow-lg" id="myButton">
+                    <div class="pl-1">
+                        <svg
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;"
+                        >
+                            <g fill="none" fill-rule="nonzero">
+                                <path d="m2 16h28"></path>
+                                <path d="m2 24h28"></path>
+                                <path d="m2 8h28"></path>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="block flex-grow-0 flex-shrink-0 h-10 w-12 pl-5">
+                        <svg
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                            role="presentation"
+                            focusable="false"
+                            style="display: block; height: 100%; width: 100%; fill: currentcolor;"
+                        >
+                            <path d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- end login -->
+
+    
+</nav>
+<div class="grid w-full grid-cols-1 my-auto mt-12 font-[Poppins] mb-8 md:grid-cols-2 px-9 xl:px-10 lg:px:10 md:px-8 gap-0">
+                <div class="flex flex-col  col-span-1 text-center lg:text-start">
+                    <div class="flex items-center  mb-4 mt-14 lg:justify-normal">
+          
+                        <h4 class=" text-sm font-bold tracking-widest text-primary uppercase text-left">Explore the Latest Tailwind Template</h4>
+                    </div>
+                    <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900 text-left font-[Poppins]">Elevate your website with Motion</h1>
+                    <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-grey-900 text-left">
+                        Say goodbye to endless hours spent on building templates from scratch. Experience the quickest, most responsive, and trendiest dashboard solution available. Seriously.
+                    </p>
+                    <div class="flex flex-row items-center gap-4 lg:flex-row">
+                       <button class="flex items-center py-4 text-sm font-medium px-7 text-dark-grey-700 hover:text-dark-grey-900 transition duration-300 rounded-2xl hover:bg-gray-200 bg-gray-100 ">
+                          Get Started
+                        </button>
+                        <button class="flex items-center py-4 text-sm font-medium px-7 text-dark-grey-700 hover:text-dark-grey-900 transition duration-300 rounded-2xl hover:bg-gray-200 bg-gray-100  ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+                            </svg>
+                            Book a free call
+                        </button>
+
+                    
+
+                    </div>
+                    <div class=" b-10 p-8 rounded-lg shadow-2xl mt-20 ">
+                      <h1 class=" text-3xl font-bold pb-2">Find places to stay on Airbnb</h1>
+                      <p class=" text-gray-500 pb-2">Discover entire homes and rooms perfect for any trip.</p>
+                      <div class=" flex flex-col gap-4">
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-[3rem]" placeholder="Location" required>
+                      <nav class=" flex flex-row gap-1">
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-[3rem] " placeholder="Check In" required>
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-[3rem]" placeholder="Check Out" required>
+                      </nav>
+                      <nav class=" flex flex-row gap-1">
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-[3rem] " placeholder="Adults" required>
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 h-[3rem]" placeholder="Children" required>
+                      </nav>
+                      <button class=" text-center justify-center items-center w-full py-3 rounded-xl bg-gray-900 text-white hover:bg-gray-800">
+                        Search
+                      </button>
+                      </div>
+                      
+                    </div>
+                </div>
+                <div class="items-center justify-end hidden md:flex ml-0 pl-0 gap-0">
+                    <img class="w-4/5 rounded-md" src="https://images.pexels.com/photos/112116/pexels-photo-112116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="header image">
+                </div>
+            </div>
+
+            
+
+          <div class=" grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 items-center justify-center m-14">
+            <div class="max-w cursor-pointer rounded-lg bg-white p-3 duration-150 flex flex-col gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg"s fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-8 h-auto text-black">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+              </svg>
+              
+              
+              <p class=" text-xl font-medium text-[Poppins] pb-1s">Enjoy some flexibility</p>
+              <p class=" text-lg">Stays with flexible cancellation make it easy to rebook if your plans change.</p>  
+        </div>
+        <div class="max-w cursor-pointer rounded-lg bg-white p-3 duration-150 flex flex-col gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg"s fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-8 h-auto text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+          </svg>
+          
+          
+          <p class=" text-xl font-medium text-[Poppins] pb-1s">Enjoy some flexibility</p>
+          <p class=" text-lg">Stays with flexible cancellation make it easy to rebook if your plans change.</p>
+        </div>
+        <div class="max-w cursor-pointer rounded-lg bg-white p-3 duration-150 flex flex-col gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg"s fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mb-4 w-8 h-auto text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+          </svg>
+          
+          
+          <p class=" text-xl font-medium text-[Poppins] pb-1s">Enjoy some flexibility</p>
+          <p class=" text-lg">Stays with flexible cancellation make it easy to rebook if your plans change.</p>
+        </div>
+        
+        </div>
+
+            <div class=" justify-left items-center flex flex-col gap-5 mt-[7rem] mb-[7rem]">
+              <p class=" text-3xl font-medium text-left md:px-10 xl:px-0 px-10 lg:px-10">Family-friendly stays with full kitchens</p>
+              <p class=" text-gray-800 pb-2 text-left md:px-10 xl:px-0 px-10 lg:px-10">Prepare a feast for loved ones in these stays with kitchens and BBQ grills.</p>
+              <!-- component -->
+<!-- Create By Joker Banny -->
+<div class=" grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 items-center justify-center">
+    <div class="max-w-xs cursor-pointer rounded-lg bg-white p-3 shadow-xl duration-150 hover:scale-105 hover:shadow-md flex flex-col gap-3">
+      <img class="w-full rounded-lg object-cover object-center h-full" src="https://a0.muscache.com/im/pictures/miso/Hosting-10983311/original/4ee1c41b-c88c-406a-b304-353bfbd83bc4.jpeg?im_w=720" alt="product" />
+      <p class=" text-md">Villa in Babakan Madang</p>
+      <p class=" text-sm text-gray-500">Istana Savage- clean,safe</p>
+      <p class=" text-sm text-gray-500">4 king beds</p>
+      <p class=" text-sm text-gray-500">7-12 Jan</p>
+      <p class=" mb-3">₹18,816 night.</p>
+</div>
+<div class="max-w-xs cursor-pointer rounded-lg bg-white p-3 shadow-xl duration-150 hover:scale-105 hover:shadow-md flex flex-col gap-3">
+  <img class="w-full rounded-lg object-cover object-center h-full" src="https://a0.muscache.com/im/pictures/d1627a9c-a5ec-40e5-b1b8-2cf93199f2c4.jpg?im_w=720" alt="product" />
+  <p class=" text-md">Villa in Babakan Madang</p>
+  <p class=" text-sm text-gray-500">Istana Savage- clean,safe</p>
+  <p class=" text-sm text-gray-500">4 king beds</p>
+  <p class=" text-sm text-gray-500">7-12 Jan</p>
+  <p class=" mb-3">₹18,816 night.</p>
+</div>
+<div class="max-w-xs cursor-pointer rounded-lg bg-white p-3 shadow-xl duration-150 hover:scale-105 hover:shadow-md flex flex-col gap-3">
+  <img class="w-full rounded-lg object-cover object-center h-full" src="https://a0.muscache.com/im/pictures/miso/Hosting-50074038/original/833d5854-2397-4412-836e-eb5c28bf9b2b.jpeg?im_w=720" alt="product" />
+  <p class=" text-md">Villa in Babakan Madang</p>
+  <p class=" text-sm text-gray-500">Istana Savage- clean,safe</p>
+  <p class=" text-sm text-gray-500">4 king beds</p>
+  <p class=" text-sm text-gray-500">7-12 Jan</p>
+  <p class=" mb-3">₹18,816 night.</p>
+</div>
+<div class="max-w-xs cursor-pointer rounded-lg bg-white p-3 shadow-xl duration-150 hover:scale-105 hover:shadow-md flex flex-col gap-3">
+  <img class="w-full rounded-lg object-cover object-center h-full" src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-650923150746497725/original/cd487049-550f-4310-b3c6-23e652cc3be2.jpeg?im_w=720" alt="product" />
+  <p class=" text-md">Villa in Babakan Madang</p>
+  <p class=" text-sm text-gray-500">Istana Savage- clean,safe</p>
+  <p class=" text-sm text-gray-500">4 king beds</p>
+  <p class=" text-sm text-gray-500">7-12 Jan</p>
+  <p class=" mb-3">₹18,816 night.</p>
+</div>
+</div>
+   </div>
+
+          <div class=" flex flex-row xl:gap-[14rem] lg:gap-20 md:gap-10 md:ml-5 justify-center mt-14 mb-14 ">
+            <div class="  hidden xl:block lg:block  ">
+              <img class=" rounded-md h-auto w-[150%] xl:block sm:hidden" src="https://images.pexels.com/photos/3760564/pexels-photo-3760564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            </div>
+            <div>
+              <!-- component -->
+<div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
+	<div class="flex flex-col items-center">
+		<h2 class="font-bold text-5xl mt-5 tracking-tight">
+			FAQ
+		</h2>
+		<p class="text-neutral-500 text-xl mt-3">
+			Your questions answered!
+		</p>
+	</div>
+	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> What is a SAAS platform?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					 SAAS platform is a cloud-based software service that allows users to access
+					and use a variety of tools and functionality.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> How does  billing work?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					We offers a variety of billing options, including monthly and annual subscription plans,
+					as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit
+					card or other secure online payment method.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> Can I get a refund for my subscription?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
+					satisfied with your subscription within the first 30 days, you can request a full refund. Refunds
+					for subscriptions that have been active for longer than 30 days may be considered on a case-by-case
+					basis.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> How do I cancel my subscription?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					To cancel your We subscription, you can log in to your account and navigate to the
+					subscription management page. From there, you should be able to cancel your subscription and stop
+					future billing.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> Can I try this platform for free?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					We offers a free trial of its  platform for a limited time. During the trial period,
+					you will have access to a limited set of features and functionality, but you will not be charged.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> How do I access   documentation?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					  Documentation is available on the company's website and can be accessed by
+					logging in to your account. The documentation provides detailed information on how to use the ,
+					as well as code examples and other resources.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> How do I contact support?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					If you need help with the platform or have any other questions, you can contact the
+					company's support team by submitting a support request through the website or by emailing
+					support@We.com.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> Do you offer any discounts or promotions?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					We may offer discounts or promotions from time to time. To stay up-to-date on the latest
+					deals and special offers, you can sign up for the company's newsletter or follow it on social media.
+				</p>
+			</details>
+		</div>
+		<div class="py-5">
+			<details class="group">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+					<span> How do we compare to other similar services?</span>
+					<span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+</svg>
+              </span>
+				</summary>
+				<p class="text-neutral-600 mt-3 group-open:animate-fadeIn">
+					 This platform is a highly reliable and feature-rich service that offers a wide range
+					of tools and functionality. It is competitively priced and offers a variety of billing options to
+					suit different needs and budgets.
+				</p>
+			</details>
+		</div>
+	</div>
+</div>
+
+<script>
+	// ...
+	// extend: {
+    //   keyframes: {
+    //     fadeIn: {
+    //       "0%": { opacity: 0 },
+    //       "100%": { opacity: 100 },
+    //     },
+    //   },
+    //   animation: {
+    //     fadeIn: "fadeIn 0.2s ease-in-out forwards",
+    //   },
+    // },
+    // ...
+</script>
+
+            </div>
+          </div>
+            
+
+           
+
+
+<!-- component -->
+<footer class="bg-white ">
+  <div class="container px-6 py-12 mx-auto">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+          <div class="sm:col-span-2">
+              <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl">Subscribe our newsletter to get update.</h1>
+
+              <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+                  <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md   focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address">
+          
+                  <button class="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                      Subscribe
+                  </button>
+              </div>
+          </div>
+
+          <div>
+              <p class="font-semibold text-gray-800 ">Quick Link</p>
+
+              <div class="flex flex-col items-start mt-5 space-y-2">
+                  <a href="#" class="text-gray-600 transition-colors duration-300   hover:underline hover:text-blue-500">Home</a>
+                  <a href="#" class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Who We Are</a>
+                  <a href="#" class="text-gray-600 transition-colors duration-300   hover:underline hover:text-blue-500">Our Philosophy</a>
+              </div>
+          </div>
+
+          <div>
+              <p class="font-semibold text-gray-800 ">Industries</p>
+
+              <div class="flex flex-col items-start mt-5 space-y-2">
+                  <a href="#" class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Retail & E-Commerce</a>
+                  <a href="#" class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Information Technology</a>
+                  <a href="#" class="text-gray-600 transition-colors duration-300 hover:underline hover:text-blue-500">Finance & Insurance</a>
+              </div>
+          </div>
+      </div>
+      
+      <hr class="my-6 border-gray-200 md:my-8 ">
+      
+      <div class="flex items-center justify-between">
+          
+          
+          <div class="flex -mx-2">
+              <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                      </path>
+                  </svg>
+              </a>
+
+              <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                      </path>
+                  </svg>
+              </a>
+
+              <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Github">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                      </path>
+                  </svg>
+              </a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+</body>
+</html><!-- component -->
